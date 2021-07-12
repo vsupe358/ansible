@@ -1,0 +1,16 @@
+--- #My loops
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+          - name: Doing multiple tasks
+            user: name='{{item}}' state=present
+            with_items:
+                    - Raj
+                    - Vaibhav
+                    - Hari
+                    - Ram
+                    - Rahul
+
+

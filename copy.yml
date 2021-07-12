@@ -1,0 +1,8 @@
+--- #Copying
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: copy a File
+      copy: src=./Dev_file dest=/root

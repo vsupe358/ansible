@@ -1,0 +1,11 @@
+--- #My Handler section
+- hosts: webservers
+  user: ansible
+  become: yes
+  tasks: 
+    - name: Installing HTTPD on Nodes
+      action: yum name=httpd state:installed
+      notify: starting httpd service
+   handlers:         
+    - name: starting httpd service
+      action: service name=httpd state=started

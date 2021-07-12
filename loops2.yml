@@ -1,0 +1,18 @@
+--- #My loops
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+          - name: Doing multiple tasks
+            yum: name='{{item}}' state=present
+            with_items:
+                    - git
+                    - docker
+                    - mysql
+                    - httpd
+                    - tree
+                    - vim
+
+
+

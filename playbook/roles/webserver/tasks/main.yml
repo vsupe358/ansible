@@ -1,0 +1,8 @@
+
+- name: INstall httpd on webserver
+  yum: pkg=httpd state=latest
+
+
+
+
+

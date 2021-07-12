@@ -1,0 +1,9 @@
+--- #My Roles
+- hosts: webservers
+  user: ansible
+  become: yes
+  roles: 
+    - webserver
+
+
+

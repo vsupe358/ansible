@@ -1,0 +1,9 @@
+--- #Shell-Script
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks: 
+    - name: running shell script
+      command: .test.sh
+

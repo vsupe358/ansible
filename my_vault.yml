@@ -1,0 +1,15 @@
+--- #My-Vault
+- hosts: webservers
+  user: ansible
+  become: yes
+  tasks:
+    - name: Testing Vault
+      yum: pkg=mysql state=installed
+
+
+
+
+
+
+
+

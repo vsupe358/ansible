@@ -1,0 +1,10 @@
+--- #My-files and Directory
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: Create a File
+      file: path=/tmp/test.txt state=touch
+    - name: Create a Directory
+      file: path=/tmp/test_Dir state=directory  
